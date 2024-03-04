@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação Parâmetros - CMPC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Simulação - AXOR 3344 6x4 </h2>
+        <form id="form">
+            <div class="form-group">
+                <label for="horimetro">Horímetro:</label>
+                <input type="number" id="horimetro" required>
+            </div>
+            <div class="form-group">
+                <label for="peso">Peso:</label>
+                <input type="number" id="peso" required>
+            </div>
+            <button type="button" id="calcular">Calcular</button>
+        </form>
+        <div id="resultado" class="resultado">
+            <p id="varPorKm"></p>
+            <p id="varPorPeso"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
