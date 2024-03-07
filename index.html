@@ -7,24 +7,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Simulação - AXOR 3344 6x4 </h2>
-        <form id="form">
-            <div class="form-group">
-                <label for="horimetro">Horímetro:</label>
-                <input type="number" id="horimetro" required>
+    <section class="painel">
+        
+        <div class="container">
+            <h2 id="box-title"></h2>
+            <form id="form">
+                <div class="form-group">
+                    <label for="horimetro">Horímetro:</label>
+                    <input type="number" id="horimetro" required>
+                </div>
+                <div class="form-group">
+                    <label for="peso">Peso:</label>
+                    <input type="number" id="peso" required>
+                </div>
+                <button type="button" id="calcular">Calcular</button>
+            </form>
+            <div id="resultado" class="resultado">
+                <p id="varPorKm"></p>
+                <p id="varPorPeso"></p>
+                <p id="varPorRota"></p>
             </div>
-            <div class="form-group">
-                <label for="peso">Peso:</label>
-                <input type="number" id="peso" required>
-            </div>
-            <button type="button" id="calcular">Calcular</button>
-        </form>
-        <div id="resultado" class="resultado">
-            <p id="varPorKm"></p>
-            <p id="varPorPeso"></p>
         </div>
-    </div>
+
+        <section class="containerCalculattion" id="containerCalculattion">
+            <table border="1" >
+                <tbody>
+                    <tr>
+                        <th scope="row">Médial Ideal</th>
+                        <td>2.40</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Desconto%</th>
+                        <td>19,45%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Total Variação</th>
+                        <td>0,45</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Médial da Rota</th>
+                        <td>1,95</td>
+                      </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+    </section>
+    
+    
+    
+    <script src="./src/utilitarios/utilitarios.js"></script>
+    <script src="./src/CMPC/simulacao_cmpc.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

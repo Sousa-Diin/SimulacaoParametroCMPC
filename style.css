@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 body {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    
     font-family: Arial, sans-serif;
     background-color: #141414;
     color: #FFFFFF;
@@ -15,14 +19,29 @@ body {
     height: 100vh;
 }
 
-.container {
+.painel {
+    width: auto;
+    height: auto; display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#_select {
+    top: 0;
+}
+
+.container,
+.containerCalculattion {
     display: flex;
     flex-flow: column;
     gap: 1rem;
-    background-color: #222222;
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container { 
+    background-color: #222222;
+    padding: 20px;
 }
 
 .form-group {
@@ -63,3 +82,47 @@ button:hover {
         width: 90%;
     }
 }
+
+/* Estilo base para a tag select */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: transparent;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%234a90e2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Ícone de seta futurístico */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    color: #4a90e2;
+  }
+  
+  /* Estilo quando o select está em foco */
+  select:focus {
+    outline: none;
+    border-color: #4a90e2; /* Cor azul futurística */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Sombra azul futurística */
+  }
+  
+  /* Estilo quando o select está desabilitado */
+  select:disabled {
+    background-color: #f2f2f2; /* Cor de fundo cinza */
+    color: #999; /* Cor do texto cinza */
+    border-color: #ccc; /* Cor da borda cinza */
+  }
+  
+  /* Estilo para um select com erro */
+  select.error {
+    border-color: #ff3333; /* Cor vermelha para indicar erro */
+    box-shadow: 0 0 5px rgba(255, 51, 51, 0.5); /* Sombra vermelha para indicar erro */
+  }
+  
+  /* Estilo para um select com sucesso */
+  select.success {
+    border-color: #00cc00; /* Cor verde para indicar sucesso */
+    box-shadow: 0 0 5px rgba(0, 204, 0, 0.5); /* Sombra verde para indicar sucesso */
+  }
+  
