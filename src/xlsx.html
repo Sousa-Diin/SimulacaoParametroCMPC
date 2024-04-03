@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importar Arquivo Excel em JavaScript</title>
+</head>
+<body>
+    <input type="file" id="input" accept=".xlsx, .xls" onchange="handleFile(this)">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+    <script>
+        function handleFile(input) {
+            const file = input.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+                const sheetName = workbook.SheetNames[0];
+                const sheet = workbook.Sheets[sheetName];
+                const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+                // Chamando a função de manipulação dos dados
+                manipulateData(jsonData);
+            };
+
+            reader.readAsArrayBuffer(file);
+        }
+
+        function manipulateData(data) {
+            // Função para manipular os dados do arquivo Excel
+            console.log(data);
+            // Aqui você pode fazer o que quiser com os dados do Excel, como processá-los, exibi-los na página, etc.
+        }
+    </script>
+</body>
+</html>

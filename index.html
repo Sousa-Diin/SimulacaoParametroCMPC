@@ -9,8 +9,13 @@
 <body>
     <section class="painel">
         
-        <div class="container">
+        <div class="container" id="container">
             <h2 id="box-title"></h2>
+            <div id="resultado" class="resultado">
+                <p id="varPorKm"></p>
+                <p id="varPorPeso"></p>
+                <p id="route"></p>
+            </div>
             <form id="form">
                 <div class="form-group">
                     <label for="horimetro">Horímetro:</label>
@@ -22,11 +27,6 @@
                 </div>
                 <button type="button" id="calcular">Calcular</button>
             </form>
-            <div id="resultado" class="resultado">
-                <p id="varPorKm"></p>
-                <p id="varPorPeso"></p>
-                <p id="varPorRota"></p>
-            </div>
         </div>
 
         <section class="containerCalculattion" id="containerCalculattion">
@@ -34,19 +34,19 @@
                 <tbody>
                     <tr>
                         <th scope="row">Médial Ideal</th>
-                        <td>2.40</td>
+                        <td id="ideal_average"></td>
                       </tr>
                       <tr>
                         <th scope="row">Desconto%</th>
-                        <td>19,45%</td>
+                        <td id="discount"></td>
                       </tr>
                       <tr>
                         <th scope="row">Total Variação</th>
-                        <td>0,45</td>
+                        <td id="tot_variation"></td>
                       </tr>
                       <tr>
                         <th scope="row">Médial da Rota</th>
-                        <td>1,95</td>
+                        <td id="route_avarege"></td>
                       </tr>
                 </tbody>
             </table>

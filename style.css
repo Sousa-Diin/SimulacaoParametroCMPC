@@ -19,6 +19,21 @@ body {
     height: 100vh;
 }
 
+tr{ width:100% }
+
+th {
+    display: flex;
+    width:99%;
+    padding: 2px;
+}
+
+td {
+    width:30%;
+    padding: 2px;
+}
+
+
+
 .painel {
     width: auto;
     height: auto; display: flex;
@@ -32,8 +47,11 @@ body {
 
 .container,
 .containerCalculattion {
+    min-width:350px;
+    min-height: min-content;
+
     display: flex;
-    flex-flow: column;
+    flex-flow: column-reverse;
     gap: 1rem;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -75,14 +93,19 @@ button:hover {
 
 .resultado {
     margin-top: 20px;
+    
 }
 
+.resultado p {
+    margin-bottom:.6rem;
+}
+/*
 @media screen and (max-width: 600px) {
     .container {
         width: 90%;
     }
 }
-
+*/
 /* Estilo base para a tag select */
 select {
     appearance: none;
@@ -125,4 +148,5 @@ select {
     border-color: #00cc00; /* Cor verde para indicar sucesso */
     box-shadow: 0 0 5px rgba(0, 204, 0, 0.5); /* Sombra verde para indicar sucesso */
   }
+  
   
